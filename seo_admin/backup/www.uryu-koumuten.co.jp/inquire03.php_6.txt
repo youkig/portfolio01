@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<?php include('config.php');?>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="discription" content="">
+    <title>お問合せ（送信完了）【瓜生工務店】</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <?php
+    $cssdate = date("YmdHms");
+    ?>
+    <link href="css/base.css?<?=$cssdate?>" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    
+</head>
+<body>
+    <div id="box">
+        <header>
+            <div class="header">
+            <h1>風呂リフォーム／キッチンリフォーム 茂原市</h1>
+                <?php include('include/header.php')?>
+           
+        </header>
+
+        <main id="contents" class="container">
+            <div id="cnt" class="inquire">
+                <p class="pankuzu"><a href="<?=$ESURL?>">TOP PAGE</a> | お問合せ（送信完了）</p>
+                <h2 class="h2title"><i class="fa-regular fa-envelope"></i>お問合せ（送信完了）</h2>
+
+<?php
+session_start();
+if(empty($_SESSION['crsf_token'])){
+echo "<p>アクセスが不正です。</p>";
+}elseif($_SESSION['crsf_token'] == filter_input(INPUT_POST,"token")){
+	// '****************************************************************
+	// ' 送信メッセージ作成(管理者へ)
+	// '****************************************************************
+	$send_msg_manager = "\n";
+    $send_msg_manager .= "【お問合せ項目】" ."\n" . $_POST["item"]."\n";
+    $send_msg_manager .= "【お問合せ内容】" ."\n" . $_POST["comment"]."\n";
+	$send_msg_manager .= "【お客様情報】\n";
+	
+	$send_msg_manager .= "【お名前】" . $_POST["name"]."\n";
+	$send_msg_manager .= "【ふりがな】" . $_POST["furigana"]."\n";
+    $send_msg_manager .= "【会社名】" . $_POST["company"]."\n";
+    $send_msg_manager .= "【メールアドレス】" . $_POST["email"]."\n";
+	$send_msg_manager .= "【郵便番号】" . $_POST["zip1"]."-".$_POST["zip1"]."\n";
+    $send_msg_manager .= "【都道府県】" . $_POST['state']."\n";
+	$send_msg_manager .= "【以下ご住所】" . $_POST["address"]."\n";
+    $send_msg_manager .= "【電話番号】" . $_POST["phone"]."\n";
+	
+	$send_msg_manager .= "------------------------------------------------------\n";
+	$send_msg_manager .= "\n";
+	$send_msg_manager .= "\n";
+	// '****************************************************************
+	// ' 送信メッセージ作成(お客様へ)
+	// '****************************************************************
+	$send_msg_visitor = "\n";
+	$send_msg_visitor .= "このメールは自動的に配信されております。\n\n";
+	If(!empty($_POST["name"])){
+		$send_msg_visitor .= $_POST["name"]." 様\n";
+	}Else{
+		$send_msg_visitor .= $_POST["email"]." 様\n";
+	}
+	$send_msg_visitor .= "株式会社瓜生工務店です。\n";
+	$send_msg_visitor .= "下記お問合せ内容を受け取りました。\n";
+	$send_msg_visitor .= "後日、担当者よりご連絡いたします。\n";
+	$send_msg_visitor .= "暫くお待ちください。\n";
+	$send_msg_visitor .= "\n";
+	$send_msg_visitor .= "\n";
+
+	// '****************************************************************
+	// ' フッダー作成
+	// '****************************************************************
+	$send_msg_footer = "=====================================================\n";
+	$send_msg_footer .= "株式会社瓜生工務店\n";
+	$send_msg_footer .= "　〒297-0002\n";
+	$send_msg_footer .= "　千葉県茂原市千町2032-66\n";
+	$send_msg_footer .= "　TEL 0475-36-5363\n";
+    $send_msg_footer .= "　TEL 0475-36-5364\n";
+	$send_msg_footer .= "　E-mail：$tomail\n";
+	$send_msg_footer .= "　URL：$ESURL\n";
+	$send_msg_footer .= "=====================================================\n";
+	$send_msg_footer .= "\n";
+	// '****************************************************************
+	// ' 管理者へ
+	// '****************************************************************
+	$header = "From:".$_POST["name"] . mb_encode_mimeheader("様")."<" . $_POST["email"].">";
+	//$to = $tomail;
+	$to = "<ishibashi@autumn-tec.co.jp>";
+	$subj = "【瓜生工務店】ホームページからお問合せ";
+	$send_msg = $_POST["name"] . "様からより下記のお問合せがありました。\n\n". $send_msg_manager;
+	if(mb_send_mail($to,$subj,$send_msg,$header)){
+        $rc_manager = "";
+    }else{
+        $rc_manager = 1;
+    }
+	// '****************************************************************
+	// ' お客様へ
+	// '****************************************************************
+	$header2 = "From:".mb_encode_mimeheader("株式会社瓜生工務店") ."<$tomail>";
+	$subj2 = "【瓜生工務店】お問合せ受付のお知らせ";
+	$to2 = "<" . $_POST["email"]. ">";
+	$send_msg2 = $send_msg_visitor. $send_msg_manager . $send_msg_footer;
+	if(mb_send_mail($to2,$subj2,$send_msg2,$header2)){
+        $rc_visitor = "";
+    }else{
+        $rc_visitor = 1;
+    }
+
+	if(!empty($rc_manager) || !empty($rc_visitor)){
+?>
+	<section id="block1">
+		<p>メール送信に失敗しました。メールアドレスをご確認ください。<br />何度も送信に失敗する場合は<a href="mailto:<?=$tomail?>" class="underline"><?=$tomail?></a>までご連絡ください。</p>
+
+	<?php
+		}else{
+			$_SESSION['crsf_token']="";
+	?>
+    <section id="block1">
+	<p>送信が完了いたしました。<br />
+	後日、担当者よりご連絡いたします。<br />
+	暫くお待ちください。</p>
+
+	<p><a href="<?=$ESURL?>">トップページへ</a></p>
+
+	<?php
+		}
+	}
+	?>
+    </section>
+                
+            </div><!--cnt end-->
+            
+            <?php include('include/leftpane.php');?>
+        </main>
+
+        <?php include('include/footer.php');?>
+    </div>
+</body>
+</html>

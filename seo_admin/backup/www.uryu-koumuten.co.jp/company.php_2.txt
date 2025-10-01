@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<?php include('config.php');?>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="discription" content="">
+    <title>会社概要【瓜生工務店】</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <?php
+    $cssdate = date("YmdHms");
+    ?>
+    <link href="css/base.css?<?=$cssdate?>" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    
+</head>
+<body>
+    <div id="box">
+        <header>
+            <div class="header" style="border:1px solid #ccc;">
+            <h1>風呂リフォーム／キッチンリフォーム 茂原市</h1>
+                <?php include('include/header.php')?>
+           
+        </header>
+
+        <main id="contents" class="container">
+            <div id="cnt" class="company">
+                <p class="pankuzu"><a href="<?=$esurl?>">TOP PAGE</a> | 会社概要</p>
+                <h2 class="h2title"><i class="fa-regular fa-building"></i>会社概要</h2>
+
+                <section id="block1">
+                    <p>【瓜生工務店】の会社概要です。</p>
+                    
+                    <dl>
+                        <dt>会社名</dt>
+                        <dd>株式会社 瓜生工務店</dd>
+                    </dl>
+
+                    <dl>
+                        <dt>代表者名</dt>
+                        <dd>代表取締役　瓜生　陽介</dd>
+                    </dl>
+
+                    <dl>
+                        <dt>所在地</dt>
+                        <dd>〒297-0002 千葉県茂原市千町2032-66</dd>
+                    </dl>
+
+                    <dl>
+                        <dt>電話番号</dt>
+                        <dd>0475-36-5363</dd>
+                    </dl>
+
+                    <dl>
+                        <dt>FAX</dt>
+                        <dd>0475-36-5364</dd>
+                    </dl>
+
+                    <dl>
+                        <dt>事業内容</dt>
+                        <dd>リフォーム工事・増改築工事、建築工事一式</dd>
+                    </dl>
+                </section>
+
+                <section id="block2">
+                    <h3>会社地図</h3>
+                     
+                        <div class="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3250.6090584876315!2d140.33871857625024!3d35.439713243202924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6022b8843b23825d%3A0x33527a18c5c3d09c!2z44CSMjk3LTAwMDIg5Y2D6JGJ55yM6IyC5Y6f5biC5Y2D55S677yS77yQ77yT77yS4oiS77yW77yW!5e0!3m2!1sja!2sjp!4v1747373462848!5m2!1sja!2sjp" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </section>
+
+                
+            </div><!--cnt end-->
+            
+            <?php include('include/leftpane.php');?>
+        </main>
+
+        <?php include('include/footer.php');?>
+    </div>
+</body>
+</html>

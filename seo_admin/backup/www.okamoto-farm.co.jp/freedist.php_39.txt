@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<?php include("config.php");?>
+
+
+<head>
+
+<meta name="robots" content="all">
+<meta property="og:title" content="太陽と野菜の直売所【東浪見岡本農園】">
+<meta property="og:type" content="website">
+<meta property="og:url" content="index.php">
+<meta property="og:locale" content="jp_JP">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<meta name="keywords" content="野菜狩り,野菜収穫体験,レンタル農園,貸し農園,レンタル農機具,レンタルキッチン,レンタル厨房,完全有機栽培,野菜直売所,井戸掘り,耕運代行,ソーラー,太陽光,非常用電源,千葉県,長生郡,一宮町,東浪見,外房,九十九里,とらみスイート">
+
+<meta name="description" content="千葉県外房エリア、九十九里海岸の南端、長生郡一宮町ある、近隣唯一の完全有機栽培農家【太陽と野菜の直売所】（東浪見岡本農園）ホームページでは、観光農園として野菜狩り・農業体験サービスのほか、期間貸しのレンタル農園のご紹介や、農機・農機具レンタル、レンタル厨房のご案内をしております。停電時にいつも電気のある災害避難所としてもご利用になれます。">
+
+<title>生活困窮家庭の方々に野菜を無料配布しています／野菜狩り 千葉県【太陽と野菜の直売所】レンタル農園 一宮町／野菜収穫体験 九十九里</title>
+
+<link rel="stylesheet" href="css/base.css?<?=str_replace(":", "", date("H:i:s")); ?>" type="text/css">
+<?php include("include/js.php")?>
+
+</head>
+
+<body>
+
+
+<div id="box">
+
+<div id="header">
+	<h1>新鮮野菜 直売所／千葉 一宮町</h1>
+
+<?php include("include/header.php")?>
+
+
+<div id="main" class="container">
+	<?php include("include/leftpane.php")?>
+	<div id="cnt" class="solar farm disaster">
+
+	<p class="pankuzu"><a href="<?=$esurl?>">トップページ</a> | 生活困窮家庭の方々に野菜を無料配布しています</p>
+	<div class="block">
+	<h2><img src="img/freedist/h2.jpg" alt="生活困窮家庭の方々に野菜を無料配布しています" width="782" height="207"></h2>
+</div>
+
+<div class="block">
+
+<div class="container block2nd">
+<div class="leftbox">
+<p>【太陽と野菜の直売所】では、生活困窮家庭のみなさまに野菜類の無料配布を行っています。当農園の近隣にお住いの方であれば、定期的にご来園いただき、お好きな野菜を畑エリアから収穫してお持ちいただいて結構です。</p>
+
+
+</div>
+
+<div class="rightbox">
+<p><img src="img/freedist/img01.jpg" alt="曲がったキュウリのイメージ写真です" width="360" height="202"></p>
+</div>
+</div>
+	
+<p>基本的に「余った野菜」「曲がったキュウリ」「虫食い野菜」となってしまうかも知れませんが、農薬を使わず有機栽培された野菜の「おいしさ」を間違いなく実感できるはずです。</p>	
+<p>また、お名前、ご住所等の身分を明かしていただく必要がありますので、匿名を希望する方は、残念ながら対象からは外させていただきます。</p>
+
+<p>生活困窮は、決してみなさまの責任ではなく、この国の社会保障制度は不充実であることが原因であり、どうか胸を張ってお名前を明らかにしてご来園ください。</p>
+
+<p>まずは、ホームページからお申込みいただくか、農園管理人まで直接電話してください！</p>
+
+<p>遠慮はいりません。ご連絡をお待ちしています！</p>
+</div>
+
+
+
+
+
+<div class="block">
+<dl class="volunteer">
+<dt>電話連絡先</dt>
+<dd><?=$mobile?>　（岡本直通）</dd>
+</dl>
+<dl class="volunteer">
+<dt>メール</dt>
+<dd><a href="mailto:torami@okamoto-farm.co.jp" class="underline">torami@okamoto-farm.co.jp</a></dd>
+</dl>
+</div>
+
+
+<?php include("include/inquireBtn.php")?>
+
+
+<p id="page-top"><a href="#box"><img src="img/common/pagetop.gif" alt="PAGETOP" width="87" height="88"></a></p>
+<!-- id cnt end --></div>
+
+<?php include("include/rightpane.php")?>
+
+<!-- id main end --></div>
+
+<?php include("include/footer.php")?>
+
+
+<!-- id box end --></div>
+</body>
+</html>

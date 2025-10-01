@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<?php include('config.php');?>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="discription" content="">
+    <title>トップページ【瓜生工務店】</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <?php
+    $cssdate = date("YmdHms");
+    ?>
+    <link href="css/base.css?<?=$cssdate?>" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    
+</head>
+<body>
+    <div id="box">
+        <header>
+            <div class="header">
+            <h1>風呂リフォーム／キッチンリフォーム 茂原市</h1>
+                <?php include('include/header.php')?>
+            <div class="header2">
+                <p><img src="img/top/header_img.png" class="flex pc"><img src="img/top/header_sm_img.png" class="flex sm"></p>
+                
+            </div>
+        </header>
+
+        <main id="contents" class="container">
+            <div id="cnt" class="top">
+                <section id="block1">
+                    <p class="catch">千葉県茂原市を中心に、快適な住まいづくりをサポート</p>
+                    
+                    <div class="txtbox1">
+                        <div class="block2nd">
+                        <p>【瓜生工務店】は、千葉県茂原市を拠点に、大工の技術を活かしたリフォーム・リノベーション・建築工事を手掛けています。住まいの快適さを高める施工で、お客様の暮らしをより豊かにするお手伝いをしています。</p>
+
+                        <p>住まいのお悩みやリフォーム・リノベーションのご相談は、【瓜生工務店】にお任せください。
+                        丁寧な施工と確かな技術で、お客様の理想の住まいを実現します。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="block2">
+                    <div class="txtbox1">
+                        <div class="block2nd">
+                        <h3>瓜生工務店が出来る事</h3>
+                        <p>【瓜生工務店】では、長年の経験と確かな技術を活かし、リフォーム・リノベーション・小さな修繕から大規模な改修を通じてお客様の理想の住まいづくりを一つひとつのご要望に丁寧に向き合い、安心してご依頼いただけるようサポートいたします。</p>
+
+                        <p><a href="" class="detailsbtn">詳しく見る</a></p>
+                        </div>
+                    </div>
+
+                    <h4>対応建築工事一覧</h4>
+
+                    <div class="result">
+                    <ul>
+                        <li>
+                            <dl>
+                                <dt><a href=""><img src="img/top/img03.png" alt="一般住宅" class="flex"></a></dt>
+                                <dd>壁紙やフローリングなどの内装工事、外壁や屋根などの外構工事まで承ります。</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt><a href=""><img src="img/top/img04.png" alt="塗装工事" class="flex"></a></dt>
+                                <dd>戸建て住宅、マンションなど建物の耐久性、美観を高める施工を行います。</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt><a href=""><img src="img/top/img05.png" alt="設備工事" class="flex"></a></dt>
+                                <dd>キッチン、洗面所、バスルーム、トイレなど水回りのリフォームを承ります。</dd>
+                            </dl>
+                        </li>
+                        
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <dl>
+                                <dt><a href=""><img src="img/top/img06.png" alt="商業店舗" class="flex"></a></dt>
+                                <dd>美容室・飲食店など、商業店舗のリフォーム・リノベーションも対応します。</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt><a href=""><img src="img/top/img07.png" alt="リノベーション" class="flex"></a></dt>
+                                <dd>中古賃貸マンションをリノベーションして、より魅力ある賃貸物件へ。</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt><a href=""><img src="img/top/img08.png" alt="新築住宅" class="flex"></a></dt>
+                                <dd>今まで培ってきた技術や経験を活かして、お客様に最適な戸建て住宅をご提供。</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                    </div>
+                </section>
+
+            
+
+                <section id="block3">
+                    <h2 class="underline">【瓜生工務店】の主なリフォーム</h2>
+
+                    <ul>
+                        <li>
+                            <p><a href=""><img src="img/top/img01.png" alt="キッチンリフォームの写真" class="flex"></a></p>
+                            <dl>
+                                <dt><a href="">キッチンリフォーム</a></dt>
+                                <dd>理想のキッチンへリフォーム！快適なキッチンをご提案。</dd>
+                            </dl>
+                            <p><a href="<?=$ESURL?>" class="detailsbtn">詳しく見る</a></p>
+                        </li>
+
+                        <li>
+                            <p><a href=""><img src="img/top/img02.png" alt="風呂・トイレ・水回りリフォームの写真" class="flex"></a></p>
+                            <dl>
+                                <dt><a href="">風呂・トイレ・水回りリフォーム</a></dt>
+                                <dd>快適で清潔な水回りのリフォームを！お気軽にお問合せください。</dd>
+                            </dl>
+                            <p><a href="<?=$ESURL?>" class="detailsbtn">詳しく見る</a></p>
+                        </li>
+                    </ul>
+
+                </section>
+
+                <section id="block5">
+                   
+                    <ul>
+                        <li><a href="<?=$ESURL?>"><img src="img/top/banner01.png" alt="協力会社・職人さん募集" class="flex"></a></li>
+                        <li><a href="<?=$ESURL?>"><img src="img/top/banner02.png" alt="工務店の対応可能エリア" class="flex"></a></li>
+                    </ul>
+                </section>
+
+                <section id="block6">
+                    <dl class="news1">
+                        <dt>お知らせ</dt>
+                        <dd>
+                            <dl class="news2">
+                                <dt>2025/04/01</dt>
+                                <dd>住まいのお悩みやリフォームのご相談は、【瓜生工務店】にお任せください。住まいのお悩みやリフォームのご相談は、【瓜生工務店】にお任せください。</dd>
+                            </dl>
+                        </dd>
+                    </dl>
+                </section>
+            </div><!--cnt end-->
+            <?php include('include/leftpane.php');?>
+        </main>
+
+        <?php include('include/footer.php');?>
+    </div>
+</body>
+</html>
